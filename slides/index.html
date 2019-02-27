@@ -8,7 +8,7 @@
 	<title>Vue.js avec ASP.net Core</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/league.css">
+	<link rel="stylesheet" href="css/theme/cservices.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -21,26 +21,60 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+
+
 </head>
 
-<body>
+<body style="background-image:url(assets/background.png);background-repeat: no-repeat ">
 	<div class="reveal">
 		<div class="slides">
-			<section>Slide 1</section>
-			
-			<section>Slide 2
-				<aside class="notes">
-					some notes
-				</aside>
-
-
+			<section data-markdown="content/01-intro.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
 			</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
+
+			<section data-markdown="content/02-vue-bases.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/03-vue-templates.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/04-router.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/05-integration-net.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/06-structure.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/07-ssr.md" data-separator="^---" data-separator-vertical="^:::" data-separator-notes="^\*\*\*"
+			 data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/08-librairies.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/09-tooling.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/10-comparaisons.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/11-resources.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
+
+			<section data-markdown="content/12-conclusion.md" data-separator="^---" data-separator-vertical="^:::"
+			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section>
 		</div>
 	</div>
 
@@ -64,7 +98,9 @@
 			transition: 'concave', // none/fade/slide/convex/concave/zoom
 
 			// Transition style for full page slide backgrounds
-			backgroundTransition: 'concave', // none/fade/slide/convex/concave/zoom
+			backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+			center: true,
 		});
 	</script>
 </body>
