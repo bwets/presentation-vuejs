@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp2.2</TargetFramework>
+
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<NoWarn>1701;1702;1705;1998;NU1604;NU1602</NoWarn>
+	</PropertyGroup>
+
+
+
+
+	<PropertyGroup>
+		<AssemblyName>Notes.Web</AssemblyName>
+		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+		<TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+		<TypeScriptBuildMode>true</TypeScriptBuildMode>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <NoWarn>1701;1702;1705;1998;NU1604;NU1602;TS1219;1219</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Client\App\Classes\" />
+	  <Folder Include="Client\App\Components\" />
+	</ItemGroup>
+
+
+</Project>

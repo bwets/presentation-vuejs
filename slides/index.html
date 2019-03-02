@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Vue.js avec ASP.net Core</title>
+	<title>Vue.js with ASP.net Core</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/cservices.css">
@@ -28,12 +28,200 @@
 <body style="background-image:url(assets/background.png);background-repeat: no-repeat ">
 	<div class="reveal">
 		<div class="slides">
-			<section data-markdown="content/01-intro.md" data-separator="^---" data-separator-vertical="^:::"
+			<!-- 			
+			<section data-background="assets/meetup.gif">
+				<div>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p style="color:white;font-weight:bold;font-size:1.2em">Vue.js with .net Core</p>
+
+				</div>
+
+
+			</section>
+
+			<section data-markdown="content/01-1-intro.md" data-separator="^---" data-separator-vertical="^:::"
 			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
 			</section>
 
-			<section data-markdown="content/02-vue-bases.md" data-separator="^---" data-separator-vertical="^:::"
+			<section>
+				Context
+
+				<section>
+					<img src="assets/Telindus_logo.gif" style="border:none" />
+				</section>
+				<section>
+					<p><b>DigitalKYC</b></p>
+					<p>"Know Your Customer"</p>
+					<p>A platform to onboard individuals and legal entities, detect risks, analyse scoring, manage related business
+						processes and documents</p>
+				</section>
+				<section>
+					<p>
+						<b>Verifies customer identity with:</b>
+						<ul>
+							<li>Face recognition</li>
+							<li>ID document scanning and analysis</li>
+							<li>Liveness tests</li>
+							<li>2FA, Voice recognition</li>
+							<li>Geolocation</li>
+							<li>...</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<b>Scores customer risk</b>
+					<ul>
+						<li>Fraud detection</li>
+						<li>Expired or forged documents</li>
+						<li>Phone number reputation</li>
+						<li>Sanction Lists & Exposed Persons (PEPs)</li>
+						<li>...</li>
+					</ul>
+
+				</section>
+
+				<section data-background="assets/award.png" style="color:white">
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p style="font-family:Verdana; font-weight:bold;font-size:1.2em">Awarded the <br /> «Fintech Solution of the Year»</p>
+				</section>
+
+				<section>
+					<p>
+						Technologies & Methods
+						<ul>
+							<li>.net Core 2.x</li>
+							<li>Vue.js</li>
+							<li>MongoDB</li>
+							<li>CQRS</li>
+							<li>Event Sourcing</li>
+							<li>Micro Services</li>
+							<li>DDD: Domain Driven Design</li>
+							<li>CI: Continuous Integration</li>
+						</ul>
+					</p>
+				</section>
+			</section> -->
+
+			<!-- <section data-markdown="content/02-vue-bases.md" data-separator="^---" data-separator-vertical="^:::"
 			 data-separator-notes="^\*\*\*" data-charset="iso-8859-15">
+			</section> -->
+
+			<section>
+				<!-- <section>
+					<img src="assets/vue-logo.png" height="300px" />
+					<p>Vue.js</p>
+					<ul>
+
+
+						<li class="fragment">Commonly referred to as Vue</li>
+						<li class="fragment">Open-source JavaScript framework for building user interfaces and single-page applications</p>
+						<li class="fragment">Created by Evan You, ex-employee from Google, first released in Feb 2014</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<p>Features</p>
+					<ul>
+						<li class="fragment">Virtual DOM</li>
+						<li class="fragment">Components</li>
+						<li class="fragment">Computed Properties</li>
+						<li class="fragment">Templates</li>
+						<li class="fragment">Directives</li>
+						<li class="fragment">Watchers</li>
+						<li class="fragment">Routing</li>
+					</ul>
+				</section> 
+
+				<section data-markdown>
+					<textarea data-template>
+						## Setup
+						CDN
+						```html
+						<script src="https://unpkg.com/vue"></script>
+						```
+						Package Manager
+						```powershell
+						npm install vue
+						```
+
+						Vue CLI
+						```powershell
+						npm install --global vue-cli
+						vue init webpack myproject
+						```
+					
+					</textarea>
+				</section>
+				<section data-markdown style="top:50px !important">
+					<textarea data-template>
+						## Basic sample
+						```html
+						<html>
+							<head>
+								<title>Vue Meetup</title>
+								<script src="https://unpkg.com/vue"></script>
+							</head>
+							<body>
+								<div id="app" style="text-align:center;">
+									<h1>{{ message }}</h1>
+								</div>
+
+								<script type = "text/javascript">
+									 const app = new Vue({
+										el: '#app',
+										data: {
+											message: 'Welcome to this Meetup'
+										}
+									});
+								</script>
+							</body>
+						</html>
+						```
+					</textarea>
+				</section> -->
+
+				<section data-markdown style="top:50px !important">
+					<textarea data-template>
+							## Components sample
+							```html
+							<template>
+								<page>
+									<template slot="toolbar">
+										<toolbar-button @click="save">Save</toolbar-button>
+									</template>
+							
+									<property-list>
+										<property-item label="Name">
+											<input class="k-textbox" type="text" v-model="team.name" />
+										</property-item>
+							
+										<property-item label="Description">
+											<input class="k-textbox" v-model="team.description" />
+ 										</property-item>
+
+										<property-item label="Members">
+											<tag-list-edit v-model="selectedUsers" :data-source="users">
+											</tag-list-edit>
+										</property-item>
+									</property-list>
+								</page>
+							</template>
+							```
+						</textarea>
+				</section>
 			</section>
 
 			<section data-markdown="content/03-vue-templates.md" data-separator="^---" data-separator-vertical="^:::"
@@ -90,8 +278,11 @@
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'socket.io/socket.io.js', async: true },
+				{ src: 'plugin/notes-server/client.js', async: true }
 			],
+
 			progress: true,
 			overview: true,
 			// Transition style

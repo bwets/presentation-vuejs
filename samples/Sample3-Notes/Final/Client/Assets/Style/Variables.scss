@@ -1,0 +1,57 @@
+$accent: #e3001b;
+$primary: #2b337c;
+$secondary: #0491d4;
+$info: #009aa7;
+$success: #28a745;
+$warning: #fdc42b;
+$error: #b20e10;
+$body-bg: #f8f8f8;
+$body-color: #323232;
+$component-bg: #ffffff;
+$component-color: #292b2c;
+$card-cap-color: #ffffff;
+
+
+
+$fontStack: "Poppins";
+
+$sideBarWidth: 250px;
+$sideBarButtonSize: 48px;
+$topBarHeight: 50px;
+
+$border-light: rgba(33, 37, 41, 0.15);
+
+
+$navigation-green-color: #a4eb96;
+$step-container-padding-left: 50px;
+$step-container-padding-right: 50px;
+$step-container-padding-top: 0px;
+$step-container-padding-bottom: 10px;
+$main-blue-color: #0050CA;
+
+$workflowPrimary: #0050CA;
+$workflowPrimaryLighten: lighten( $workflowPrimary, 40%);
+$workflowAccent: #26a69a;
+$workflowButtonColor: white;
+$workflow-height: 700px;
+$workflow-width: 850px;
+
+%flex-col {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin: 0;
+}
+
+%flex-row {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	margin: 0;
+}
+
+

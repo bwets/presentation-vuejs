@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"allowJs": true,
+
+		"target": "es2018",
+		"alwaysStrict": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"baseUrl": "",
+		"paths": {
+			"~/*": [ "./Client/*" ]
+		}
+	},
+	"exclude": [
+		"wwwroot/build",
+		"node_modules",
+		"bin",
+		"obj"
+	]
+}

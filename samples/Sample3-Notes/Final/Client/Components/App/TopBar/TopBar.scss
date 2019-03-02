@@ -1,0 +1,210 @@
+﻿@import "Client/Assets/Style/variables";
+
+.topbar {
+	user-select: none ;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	background-color: black;
+	grid-template-columns: $sideBarWidth auto 400px;
+	grid-template-areas: "logo search tools";
+	background-color: black;
+	padding: 0;
+	color: #fff;
+	/*z-index: 10;*/
+	.logo {
+		width: $sideBarWidth;
+		font-size: 1.2em;
+		vertical-align: middle;
+		line-height: $topBarHeight;
+		padding-left: 3px;
+
+		a {
+			color: white;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.image {
+			width: 50px;
+		}
+
+		.light {
+		}
+
+		.bold {
+			font-weight: 900;
+		}
+	}
+
+	.tools {
+		width: 100%;
+		align-content: flex-end;
+
+		.topBarAction {
+			line-height: $topBarHeight;
+			position: relative;
+			padding-right: 6px;
+			padding-left: 6px;
+			cursor: pointer;
+			float: right;
+		}
+
+		.topBarAction:hover {
+			background-color: #666666;
+		}
+
+		.topBarActionGrayBg {
+			background-color: #666666;
+		}
+
+		.topbarPopup {
+			-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+			position: absolute;
+			top: $topBarHeight;
+			background-color: white;
+			color: black;
+			cursor: default;
+			line-height: normal;
+			z-index: 2000;
+
+			.bottomContainer {
+				text-align: center;
+				padding-top: 12px;
+				color: $secondary;
+				height: 40px;
+				background-color: rgba(0, 0, 0, 0.04);
+				cursor: pointer;
+			}
+
+			.bottomContainer:hover {
+				background-color: rgba(0, 0, 0, 0.08);
+				color: $primary;
+			}
+		}
+
+		.notifs {
+
+			.notifsPopup {
+				right: 0px;
+				width: 300px;
+				height: 300px;
+
+				.topContainer {
+					height: 260px;
+
+					ul {
+						list-style: none;
+						margin: 0;
+						overflow: hidden;
+						padding: 0;
+
+						li {
+							padding: 10px;
+							border-bottom: 1px solid #e6e6e6;
+
+							.notifDetail {
+								padding-left: 15px;
+								width: 250px;
+								display: inline-block;
+								vertical-align: middle;
+
+								.notifTitle {
+									display: block;
+								}
+
+								.notifDate {
+									display: block;
+									font-size: 10px;
+								}
+							}
+
+							.notifDismiss {
+								display: inline-block;
+								vertical-align: middle;
+								font-size: 18px;
+								cursor: pointer;
+								padding-left: 5px;
+							}
+						}
+
+						li::before {
+							-moz-border-radius: 50%;
+							-webkit-border-radius: 50%;
+							border-radius: 50%;
+							-moz-background-clip: padding-box;
+							-webkit-background-clip: padding-box;
+							background-clip: padding-box;
+							background: $secondary;
+							content: '';
+							height: 8px;
+							width: 8px;
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+
+					.noOtherNotifs {
+						padding-left: 10px;
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+
+
+		.account {
+			max-width: 250px;
+
+			img {
+				margin-bottom: 10px;
+			}
+
+			.accountUserName {
+				max-width: 200px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.accountPopup {
+				right: 0px;
+				width: 250px;
+				height: 200px;
+
+				.topContainer {
+					height: 160px;
+					position: relative;
+					text-align: center;
+
+					.logOutButton {
+						position: absolute;
+						right: 5px;
+						top: 5px;
+						height: 20px;
+						cursor: pointer;
+						color: $secondary;
+					}
+
+					.logOutButton:hover {
+						color: $primary;
+					}
+
+					.imageAccountContainer {
+						padding-top: 15px;
+					}
+
+					.infoContainer {
+						height: 20px;
+						width: 250px;
+						text-overflow: ellipsis;
+						overflow: hidden;
+					}
+				}
+			}
+		}
+	}
+}

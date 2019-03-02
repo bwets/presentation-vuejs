@@ -1,0 +1,131 @@
+﻿@import "Variables";
+@import "Includes/PropertyGroup";
+@import "Includes/Helpers";
+@import "Includes/Form";
+@import "External/telerik/telerik";
+@import "External/telerik/hacks";
+@import "External/toastr/toastr";
+@import "External/toastr/hacks";
+
+html, body {
+	font-family: $fontStack;
+	font-size: 12px !important;
+	font-weight: 300;
+	height: 100%;
+	background-color: $body-bg;
+	margin: 0;
+	padding: 0;
+	overflow: auto !important;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: $secondary;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+input {
+	font-size: 1rem !important;
+}
+
+
+.badge {
+	background-color: $accent;
+	color: white !important;
+	border-radius: 5px;
+	padding-left: 3px;
+    padding-right: 3px;
+}
+
+.button {
+	padding: 4px 10px 4px 10px;
+	margin: 3px;
+	border-radius: 25px;
+	cursor: pointer;
+	border: 0px;
+	font-size: 12px;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&-blue {
+		color: #ffffff;
+		background-color: $secondary;
+
+		&:hover {
+			background-color: $primary;
+			color: white;
+		}
+	}
+
+	&-red {
+		color: #ffffff;
+		background-color: $accent;
+
+
+		&:hover {
+			background-color: darken($accent, 10%);
+			color: white;
+		}
+	}
+}
+
+
+
+
+
+
+
+.tag {
+	border-radius: 10px;
+	display: inline-block;
+	padding: 3px 8px 3px 8px;
+	margin: 2px;
+	background-color: $primary;
+	color: white;
+
+	a {
+		color: white;
+	}
+
+	&.success {
+		background-color: green;
+		color: white;
+	}
+
+	&.error {
+		background-color: red;
+		color: white;
+	}
+}
+
+.color-secondary {
+	color: $secondary;
+}
+
+.bg-secondary {
+	background-color: $secondary !important;
+	color: white !important;
+}
+
+@font-face {
+	font-family: "FontAwesome4";
+	font-weight: normal;
+	font-style: normal;
+	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0");
+	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+}
