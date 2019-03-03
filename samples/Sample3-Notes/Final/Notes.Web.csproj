@@ -33,7 +33,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Client\App\Classes\" />
-	  <Folder Include="Client\App\Components\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="notes.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 

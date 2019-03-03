@@ -15,8 +15,6 @@ namespace Notes.Web
 				.ConfigureKestrel((context, options) => { })
 				.Build()
 				.Run();
-			
 		}
-
 	}
 }

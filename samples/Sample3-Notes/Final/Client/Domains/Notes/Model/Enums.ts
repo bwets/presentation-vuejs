@@ -1,5 +1,5 @@
 ﻿export enum NoteStatus {
-	Draft,
-	Normal,
-	Deleted
+	Draft = "Draft",
+	Normal = "Normal",
+	Deleted = "Deleted"
 }

@@ -1,11 +1,5 @@
-﻿@import "Variables";
-@import "Includes/PropertyGroup";
-@import "Includes/Helpers";
-@import "Includes/Form";
-@import "External/telerik/telerik";
-@import "External/telerik/hacks";
-@import "External/toastr/toastr";
-@import "External/toastr/hacks";
+﻿@import "Variables.scss";
+@import 'vuetify/src/stylus/main.styl';
 
 html, body {
 	font-family: $fontStack;

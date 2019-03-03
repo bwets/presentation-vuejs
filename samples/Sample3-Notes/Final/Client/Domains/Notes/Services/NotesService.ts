@@ -1,19 +1,32 @@
-﻿import { Service } from "~/Framework/Core";
+﻿import axios from "axios";
+
 import { Note } from "~/Domains/Notes";
 
-export class NotesService extends Service {
+export class NotesService {
+
+	baseUrl: string = "/api/notes/";
+
 	constructor() {
-		super("notes");
 	}
 
 	async get(id: string): Promise<Note> {
-		return await super.get(id);
+		const response = await axios.get(this.baseUrl + id);
+		return response.data;
+	}
+
+	async save(note: Note): Promise<Note> {
+		const response = await axios.post(this.baseUrl, note);
+		return response.data;
 	}
 
 	async query(): Promise<Note[]> {
-		return await super.get("list");
+		const response = await axios.get(this.baseUrl);
+		return response.data;
 	}
 
+	async delete(id: string) {
+		await axios.delete(this.baseUrl + id);
+	}
 }
 
 

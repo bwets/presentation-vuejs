@@ -11,7 +11,7 @@ export class Service {
 		this._relativeUrl = relativeUrl;
 	}
 
-	getUrl(last: string): string {
+	protected getUrl(last: string): string {
 		let url = this._baseUrl;
 		if (this._relativeUrl !== null && this._relativeUrl !== undefined) {
 			url = url + this._relativeUrl + "/";
@@ -24,14 +24,14 @@ export class Service {
 
 
 	}
-	async get(url: string, options: any = {}) {
+	protected async get(url: string = "", options: any = {}) {
 		url = this.getUrl(url);
 		console.debug("service.get", url, options);
 		const response = await axios.get(url, options);
 		return this.handle(response);
 
 	}
-	async post(url: string, content: any, options: any = {}) {
+	protected  async post(url: string, content: any, options: any = {}) {
 		url = this.getUrl(url);
 		console.debug("service.post", url, options);
 		options.validateStatus = (status: number) => status < 500; // Reject only if the status code is greater than or equal to 500
@@ -39,13 +39,13 @@ export class Service {
 		return this.handle(response);
 	}
 
-	async delete(url: string, params: any | null = null) {
+	protected async delete(url: string, params: any | null = null) {
 		url = this.getUrl(url);
 		await axios.delete(url, params);
 	}
 
 
-	handle(response: any) {
+	protected handle(response: any) {
 		if (response.status === 499) {
 			const error = response.data;
 			console.error(error);

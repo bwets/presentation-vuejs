@@ -1,0 +1,118 @@
+﻿@import "Client/Assets/Style/Variables";
+
+.v-input, .v-label,
+.v-list__tile {
+	font-size: 1rem;
+}
+
+.v-tabs__slider.accent {
+	background-color: $secondary;
+	border-color: $secondary;
+	border-style: 3px solid $secondary;
+	height: 5px;
+}
+
+
+
+// Remove reserved place to display label and message
+.v-select,
+.v-text-field,
+.v-input--selection-controls,
+.v-input__slot {
+	margin: 0;
+	padding: 0;
+}
+
+.v-input--selection-controls:not(.v-input--hide-details) .v-input__slot {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+// Fix dropdown position
+.v-select .menuable__content__active {
+	top: 32px !important;
+	left: 0 !important;
+}
+
+
+
+// Table space
+.v-table__overflow {
+	table.v-table tbody td,
+	table.v-table tbody th,
+	table.v-table thead th,
+	table.v-table thead tr {
+		height: 28px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.v-table .v-messages {
+		display: none;
+	}
+}
+
+.v-datatable__actions__range-controls {
+	.v-btn {
+		margin: 0;
+		height: 24px;
+	}
+
+	.v-btn--icon {
+		width: 24px;
+	}
+
+	min-height: 28px;
+}
+
+.v-datatable__actions__select .v-select {
+	margin: 0;
+}
+
+
+
+
+.v-card__title {
+	padding: 10px;
+}
+
+.v-tabs, .v-window, .v-window-item, .v-window__container {
+	@extend %flex-col;
+}
+
+.v-tabs {
+	.v-tabs__slider {
+		background-color: $secondary;
+		border-color: $secondary;
+	}
+
+	.v-tabs__div {
+		text-transform: unset;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #eee;
+		}
+	}
+}
+
+.v-expansion-panel {
+	&__header {
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+}
+
+.v-toolbar {
+	.v-toolbar__title {
+		font-size: 16px;
+	}
+}
+
+
+.v-btn{
+	text-transform:unset;
+	min-width:unset;
+}
