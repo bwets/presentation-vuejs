@@ -83,10 +83,6 @@
 		get items() {
 			return [
 				{ icon: 'lightbulb_outline', text: 'Notes', url:"/search" },
-				{ icon: 'touch_app', text: 'Reminders' },
-				{ divider: true },
-				{ heading: 'Labels' },
-				{ icon: 'add', text: 'Create new label'},
 				{ divider: true },
 				{ icon: 'archive', text: 'Archive' },
 				{ icon: 'delete', text: 'Trash' },

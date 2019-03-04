@@ -7,14 +7,13 @@ Vue.use(VueRouter);
 
 import App from "./App";
 
-import HomePage from "./Pages/Home";
 import ListPage from "./Pages/List";
 import ViewPage from "./Pages/View";
 import EditPage from "./Pages/Edit";
 
 const router = new VueRouter({
 	routes: [
-		{ path: "/", component: HomePage},
+		{ path: "/", component: ListPage},
 		{ path: "/search", component: ListPage, props: true },
 		{ path: "/view/:id", component: ViewPage, props: true },
 		{ path: "/edit/:id?", component: EditPage, props: true }
