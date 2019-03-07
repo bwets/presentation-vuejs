@@ -1,11 +1,6 @@
 ﻿<template>
-	<v-card>
-		<v-card-title dark>{{note.title}}</v-card-title>
-		<v-card-text>
-			{{body}}
-			<v-chip v-for="t in note.tags">{{t}}</v-chip>
-		</v-card-text>
-
+	<v-card height="300px">
+		
 		<v-card-actions>
 			<v-spacer></v-spacer>
 			<v-btn icon @click="remove(note)">
@@ -18,6 +13,16 @@
 				<v-icon>share</v-icon>
 			</v-btn>
 		</v-card-actions>
+
+		<v-card-title dark ><b>{{note.title}}</b></v-card-title>
+
+		<v-card-text>
+			<div v-html="body" style="max-height:100px;overflow:hidden"></div>
+			<br/>
+			<br/>
+			<v-chip v-for="t in note.tags">{{t}}</v-chip>
+		</v-card-text>
+
 	</v-card>
 
 </template>
@@ -26,6 +31,9 @@
 	import { Notifications } from "~/Framework/Core";
 
 	import { Note, NotesService } from "~/Domains/Notes"
+
+	import { Converter } from "showdown";
+	var converter = new Converter();
 
 	@Component
 	export default class ListPage extends Vue {
@@ -42,17 +50,21 @@
 		get body() {
 			if(!this.note) return "";
 
+			let text:string = "";
+
 			if (this.full) {
-				return this.note.body;
+				text = this.note.body;
 			} else {
 				if (this.note.body.length > 100) {
-					return this.note.body.substring(1, 100) + "...";
+					text = this.note.body.substring(1, 100) + "...";
 				} else {
-					return this.note.body;
+					text = this.note.body;
 				}
 				
 			}
+			return converter.makeHtml(text)
 		}
+
 		@Emit("edit")
 		edit(note: Note) {
 			return note;

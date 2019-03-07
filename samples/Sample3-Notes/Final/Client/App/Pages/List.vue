@@ -1,7 +1,7 @@
 ﻿<template>
 	<div style="display:flex;flex-direction:row;flex-flow:wrap;height:100%;overflow-y:auto">
 		<div v-for="n in notes" style="padding:10px">
-			<note-view :note="n" @remove="remove" @edit="edit" @share="share" style="max-width:200px"/>
+			<note-view :note="n" @remove="remove" @edit="edit" @share="share" style="width:300px;max-width:300px;height:300px;"/>
 		</div>
 	</div>
 </template>

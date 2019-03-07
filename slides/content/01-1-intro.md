@@ -1,5 +1,4 @@
-## Vue.js with .net Core
-
+![logo](assets/logo.jpg)
 ---
 Presentation
 *** 
@@ -20,7 +19,7 @@ Presentation
 - Part of Cronos Group
 - MS Gold Partner
 - Sharepoint / BI
-- Custom Business Application Developmnent
+- Custom Business Application Development
 ``` json
  .net, Java
  ```

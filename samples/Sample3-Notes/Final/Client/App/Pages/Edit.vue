@@ -43,7 +43,7 @@
 			else {
 				this.note = {
 					id: "",
-					title: "new note",
+					title: "",
 					status: NoteStatus.Draft,
 					body: "",
 					tags: ["New"]

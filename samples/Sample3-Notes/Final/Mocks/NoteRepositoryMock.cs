@@ -22,6 +22,13 @@ namespace Notes.Web.Mocks
 			var notes = Newtonsoft.Json.JsonConvert.DeserializeObject<Note[]>(json);
 
 			this._Notes = new List<Note>(notes.Take(3));
+			this._Notes.Add(new Note()
+			{
+				Id = Guid.NewGuid(),
+				Body = "# heading\n##heading\n* bullet1\n* bullet2\n* bullet3",
+				Status = NoteStatus.Normal,
+				Title = "Markdown sample"
+			});
 		}
 
 
@@ -52,6 +59,7 @@ namespace Notes.Web.Mocks
 			if (note.Status == NoteStatus.Draft)
 			{
 				note.Id = Guid.NewGuid();
+				note.Status = NoteStatus.Normal;
 			}
 
 			if (_Notes.Any(n => n.Id == note.Id))
