@@ -1,1 +1,33 @@
-Librairies
+#Librairies
+
+:::
+# Vuetify 
+- Material design framework
+- More than 80 components
+- No CSS collision
+
+***
+	DC
+
+
+	
+:::
+# Example 
+``` json
+<v-app>
+	<v-tooltip bottom>
+		<template v-slot:activator="{ on }">
+			<v-btn flat color="error" v-on="on">Button</v-btn>
+		</template>
+		<span>Tooltip</span>
+	</v-tooltip>
+	<v-select
+		:items="items"
+		label="Standard"
+	></v-select>
+</v-app>
+```
+
+***
+	DC
+
