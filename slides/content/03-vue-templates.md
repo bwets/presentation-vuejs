@@ -25,8 +25,51 @@ Vue - Templates
 :::
 # .vue export 
 
+``` html
+<template>
+  <div>
+    <p>{{ firstname }} {{ lastname }}</p>
+    <p>{{ fullname }}</p>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        firstname: 'John',
+        lastname: 'Doe'
+      }
+    },
+    computed: {
+      fullname: function() {
+        return this.firstname + ' ' + this.lastname;
+      }
+    }
+  }
+</script>
+```
+
+:::
+# .vue export 
+
+``` js
+import ComponentA from './ComponentA'
+import ComponentC from './ComponentC'
+
+export default {
+  components: {
+    ComponentA,
+    ComponentC
+  },
+  // ...
+}
+```
+
 *** 
-    LC
+LC
+
+Using a module system need to import each component you'd like to use before you locally register it.
 
 	
 :::
@@ -60,6 +103,64 @@ Vue - Templates
 	
 :::
 # Directives
+
+## Data binding
+
+### One-way
+
+ - {{ note.title }}
+ - v-bind:title="noteTitle"
+
+## Two-way
+
+v-model
+
+``` html
+<v-text-field v-model="note.title" required></v-text-field>
+``` 
+:::
+## Conditional Rendering
+ - v-if 
+ - v-else-if 
+ - v-else
+
+``` html
+<div v-if="notes.length === 0">
+  No note found
+</div>
+<div v-else-if="notes.length === 1">
+  One note found 
+</div>
+<div v-else>
+  Few notes found
+</div>
+```
+
+ - v-show
+
+:::
+## List Rendering
+v-for
+``` html
+<div v-for="n in notes" :key="n.title">
+    <note-view :note="n" />
+</div>
+```
+
+index
+``` html
+<div v-for="(n, index) in notes" :key="index">
+    Note {{ index }}: 
+    <note-view :note="n" />
+</div>
+```
+
+:::
+## Event Handling
+v-on or @
+``` html
+<note-view :note="n" v-on:remove="remove" @edit="edit" @share="share" />
+```
 
 *** 
     LC
