@@ -15,10 +15,24 @@ export default {
   },
   props: {
     messages: function() {
-      return this.sayHello(this.name) + ", "  + this.sayWelcome(this.place);
+      return this.sayHello(this.name) + ", " + this.sayWelcome(this.place);
 
       // Hello Dave, Welcome in space
     }
   }
 };
+
+/////////////////////////////////////////////
+
+import Component, { mixins } from "vue-class-component";
+import Hello from "./hello";
+import Welcome from "./welcome";
+
+@Component
+export class SampleComponent extends mixins(Hello, Welcome) {
+  get message() {
+    return this.sayHello(this.name) + ", " + this.sayWelcome(this.place);
+    // Hello Dave, Welcome in space
+  }
+}
 </script>

@@ -2,7 +2,7 @@
 export default {
     methods : {
         sayWelcome: function(place){
-            return "Welcome at " + place;
+            return "Welcome in " + place;
         }  
     }
 }
