@@ -1,4 +1,4 @@
-# Comparaisons 
+# Comparaison
 - with Angular
 - with React
 
