@@ -797,13 +797,12 @@
 					```js
 					const store = new Vuex.Store({
 						state: {
-							notes: [
-								{ id: 1, text: '...' },
-								{ id: 2, text: '...' }
+							entries: [
+								{ id: 1, text: "..." },
+								{ id: 2, text: "..." }
 							]
 						}
 					})
-
 					```	
 					Notes:
 					# LC
@@ -817,14 +816,14 @@
 					``` js
 					const store = new Vuex.Store({
 						state: {
-							notes: [
+							entries: [
 								{ id: 1, text: '...' },
 								{ id: 2, text: '...' }
 							]
 						},
 						getters: {
 							noteNumber: state => {
-								return state.notes.length
+								return state.entries.length
 							}
 						}
 					})
