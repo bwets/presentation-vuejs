@@ -1,11 +1,11 @@
 Vue - Templates
 
 ***
-	DC
-	Template are HTML-based
-	Bind the rendered DOM with the Vue instance's data
-	All vue tempaltes can by parsed by HTML parsers
-	Multiple ways to include templates in your HTML project
+	DC  
+	Template are HTML-based  
+	Bind the rendered DOM with the Vue instance's data  
+	All vue tempaltes can by parsed by HTML parsers  
+	Multiple ways to include templates in your HTML project  
 
 
 :::
@@ -15,11 +15,11 @@ Vue - Templates
 - Separate the template from the component definition
 
 *** 
-	DC
-	The first one is directly in your HTML page by adding a attribute on the component.
-	Vue will use the inner content as a template.
-	Permtits to integrate Vue quickly but not recommanded.
-	As a best practice, prefer defining templates inside the component 
+	DC  
+	The first one is directly in your HTML page by adding a attribute on the component.  
+	Vue will use the inner content as a template.  
+	Permtits to integrate Vue quickly but not recommanded.  
+	As a best practice, prefer defining templates inside the component  
    
    
 :::
@@ -53,9 +53,9 @@ Vue - Templates
 ```
 
 *** 
-    DC
-	Display plain text. variable will be replaced by the value of the object. It will also be updated whenever the variable property changes
-	v-bind binds element’s href attribute to the value of the expression url. A shorcut is to use only the : (colon)
+    DC  
+	Display plain text. variable will be replaced by the value of the object. It will also be updated whenever the variable property changes  
+	v-bind binds element’s href attribute to the value of the expression url. A shorcut is to use only the : (colon)  
 	
 	
 :::

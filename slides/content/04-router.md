@@ -1,12 +1,12 @@
 Router
-- In a single page application
+- Single page application
 - Sync URL and displayed content
 - Vue Router library
 
 ***
-	DC
-	improve the responsiveness of your web application by rendering the pages once and display them dynamically based on the current context of the application
-	Vue router library is official, but you can use whatever routing library you want
+	DC  
+	improve the responsiveness of your web application by rendering the pages once and display them dynamically based on the current context of the application  
+	Vue router library is official, but you can use whatever routing library you want  
 	
 	
 :::
@@ -27,9 +27,9 @@ Vue.use(VueRouter)
 ```
 
 ***
-	DC
-	router-link to define the URLs
-	router-view is the component is where the Vue Router will put the content that matches the current URL.
+	DC  
+	router-link to define the URLs  
+	router-view is the component is where the Vue Router will put the content that matches the current URL.  
 		
 	
 :::
@@ -50,8 +50,8 @@ const router = new VueRouter({
 ```
 
 ***
-	DC
-	Pass the routes to the initialization of the router object		
+	DC  
+	Pass the routes to the initialization of the router object  
 	
 	
 :::

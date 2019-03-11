@@ -1,4 +1,4 @@
-Comparaisons 
+# Comparaisons 
 - with Angular
 - with React
 
@@ -10,10 +10,10 @@ Comparaisons
 - WebApp vs SPA
 
 ***
-	DC
-	Angular framework typescript
-	Angular Much heavier framework, vue lightier, and easier to include in a SPA
-	Angular recommanded for full web app
+	DC  	
+	Angular framework typescript  
+	Angular Much heavier framework, vue lightier, and easier to include in a SPA  	
+	Angular recommanded for full web app  
 
 
 :::
@@ -23,7 +23,7 @@ Comparaisons
 - Templates vs JSX
 
 ***
-	DC
-	Both are Library, written js, use VDOM
-	Separations of concerns vs everything is javascript
+	DC  
+	Both are Library, written js, use VDOM  
+	Separations of concerns vs everything is javascript  
 	
