@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	</header>
+<body>
+	<div id="app">	
+		<my-checkbox inline-template>		
+			<div>
+				<input type="checkbox" @click="checked = !checked" :checked="checked" /><span>{{checked}}</span>
+			</div>
+		</my-checkbox>
+	</div>
+	<script type="text/javascript">
+		Vue.component('my-checkbox', {
+			data() {
+				return {
+					checked: false
+				}
+			}
+		});
+		var app = new Vue({
+			el: '#app'
+		});
+	</script>
+</body>
+</html>
