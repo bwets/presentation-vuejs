@@ -349,40 +349,19 @@
 									fullname: function () {
 										return this.firstname + ' ' + this.lastname;
 									}
-								}
+								},
+								...
 							}
 						</script>
 						```
 						Notes:
 						# LC
+						 - Components
+						 - Lifecycle methods
+						 - Methods
 
 					</textarea>
 				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-						## Javascript Components
-						```js
-						import ComponentA from './ComponentA'
-						import ComponentC from './ComponentC'
-							
-						export default {
-							components: {
-							ComponentA,
-							ComponentC
-							},
-							// ...
-						}
-						```
-						Notes:
-						# LC
-						Using a module system need to import each component you'd like to use before you locally
-						register it.
-						</textarea>
-
-				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
@@ -490,14 +469,6 @@
 						v-for
 						```html
 						<div v-for="n in notes" :key="n.title">
-							<note-view :note="n" />
-						</div>
-						```
-						
-						index
-						```html
-						<div v-for="(n, index) in notes" :key="index">
-							Note {{ index }}: 
 							<note-view :note="n" />
 						</div>
 						```
@@ -708,10 +679,50 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					## .net integration
-					Notes:
-					# LC					
-					TODO
+						## .net integration
+
+						### Enable static files in *Startup.cs*
+
+						``` cs
+						public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+						{
+							...
+							app.UseStaticFiles();
+							...
+						}
+						```
+
+						Notes:
+						# LC					
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### cshtml
+
+						``` html
+						@page
+
+						<title>Vue Meetup</title>
+						<script src="https://unpkg.com/vue"></script>
+
+						<div id="app" style="text-align:center;">
+							<h1>{{ message }}</h1>
+						</div>
+
+						<script type="text/javascript">
+							const app = new Vue({
+								el: '#app',
+								data: {
+									message: 'Welcome to this Meetup'
+								}
+							});
+						</script>
+						```
+
+						Notes:
+						# LC	
 					</textarea>
 				</section>
 
@@ -784,6 +795,7 @@
 					## Vuex
 
 					State management pattern 
+
 					Centralized store for all the components
 					
 					Notes:
@@ -799,7 +811,9 @@
 					<textarea data-template>
 					### Vuex State
 					Vuex uses a single state tree
+					
 					This single object contains all your application level state
+					
 					Serves as the "single source of truth".
 					
 					```js
@@ -814,33 +828,6 @@
 					```	
 					Notes:
 					# LC
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					### Vuex Getters
-					Compute derived state based on store state
-					``` js
-					const store = new Vuex.Store({
-						state: {
-							entries: [
-								{ id: 1, text: '...' },
-								{ id: 2, text: '...' }
-							]
-						},
-						getters: {
-							noteNumber: state => {
-								return state.entries.length
-							}
-						}
-					})
-					```		
-					
-					Notes:
-					# LC
-					Sometimes we may need to compute derived state based on store state
-				
 					</textarea>
 				</section>
 
@@ -882,14 +869,8 @@
 					
 					``` js
 					const store = new Vuex.Store({
-						state: {
-							count: 0
-						},
-						mutations: {
-							increment (state) {
-								state.count++
-							}
-						},
+						state: { ... },
+						mutations: { ... },
 						actions: {
 							increment (context) {
 								context.commit('increment')
@@ -904,41 +885,6 @@
 					- Instead of mutating the state, actions commit mutations.
 					- Actions can contain arbitrary asynchronous operations.
 
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					### Vuex Modules
-					Due to using a single state tree, all state of our application is contained inside one big object
-					
-					``` js
-					const moduleA = {
-						state: { ... },
-						mutations: { ... },
-						actions: { ... },
-						getters: { ... }
-					}
-					
-					const moduleB = {
-						state: { ... },
-						mutations: { ... },
-						actions: { ... }
-					}
-					
-					const store = new Vuex.Store({
-						modules: {
-							a: moduleA,
-							b: moduleB
-						}
-					})
-					
-					store.state.a // -> `moduleA`'s state
-					store.state.b // -> `moduleB`'s state
-					```
-					
-					Notes:
-					# LC
 					</textarea>
 				</section>
 
