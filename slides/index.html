@@ -87,7 +87,12 @@
 				<section>
 					<img src="assets/Telindus_logo.gif" style="border:none" />
 					<aside class="notes">
-						<h1>GK</h1>
+						<h1>GK
+
+							<ul>
+								<li>team is developing KYC</li>
+							</ul>
+						</h1>
 					</aside>
 				</section>
 				<section>
@@ -96,17 +101,22 @@
 					<p>A platform to onboard individuals and legal entities, detect risks, analyse scoring, manage
 						related business
 						processes and documents</p>
-					<p>Awarded the <br /> «Fintech
-						Solution of the Year»</p>
+					<p>Awarded the <br /> 
+						«Fintech Solution of the Year»</p>
 
 					<aside class="notes">
 						<h1>GK</h1>
+
+						<ul>
+							<li>started end 2017</li>
+							<li>used in different scenarios</li>
+						</ul>
 					</aside>
 
 				</section>
 				<section>
 					<p>
-						<b>Verifies customer identity with:</b>
+						<b>Verifies customer information with:</b>
 						<ul>
 							<li>Face recognition</li>
 							<li>ID document scanning and analysis</li>
@@ -147,10 +157,18 @@
 							<li>Micro Services</li>
 							<li>DDD: Domain Driven Design</li>
 							<li>CI: Continuous Integration</li>
+							<li>Docker</li>
 						</ul>
 					</p>
 					<aside class="notes">
 						<h1>GK</h1>
+
+						<ul>
+							<li>started as standard asp.net / sql server</li>
+							<li>gradually modernizing</li>
+							<li>gradually using Vue more and more</li>
+							<li>now 100% Vue</li>
+						</ul>
 					</aside>
 				</section>
 			</section>
@@ -160,7 +178,7 @@
 					<img src="assets/vue-logo.png" height="300px" />
 					<p>Vue.js</p>
 					<ul>
-						<li>Commonly referred to as Vue</li>
+						<li>Commonly referred to as Vue,</li>
 						<li>Open-source JavaScript framework for building user interfaces and
 							single-page applications</p>
 						<li>Created by Evan You, ex-employee from Google, first released in Feb 2014
@@ -168,6 +186,10 @@
 					</ul>
 					<aside class="notes">
 						<h1>GK</h1>
+						<ul>
+							<li>prononced View</li>
+							<li>current version 2.6.8</li>
+						</ul>
 					</aside>
 				</section>
 
@@ -211,7 +233,7 @@
 				</section>
 				<section data-markdown style="top:50px !important">
 					<textarea data-template>
-						## Basic sample
+						## Minimal Vue app
 						```html
 						<html>
 							<head>
@@ -242,13 +264,13 @@
 
 				<section data-markdown style="top:50px !important">
 					<textarea data-template>
-						## Components sample
+						## Advanced component template
 						```html
 						<template>
 							<page>
-								<template slot="toolbar">
+								<toolbar>
 									<toolbar-button @click="save">Save</toolbar-button>
-								</template>
+								</<toolbar>
 						
 								<property-list>
 									<property-item label="Name">
@@ -260,8 +282,7 @@
 									</property-item>
 
 									<property-item label="Members">
-										<tag-list-edit v-model="selectedUsers" :data-source="users">
-										</tag-list-edit>
+										<tag-list-edit v-model="selectedUsers" :data-source="users"/>
 									</property-item>
 								</property-list>
 							</page>
@@ -270,6 +291,8 @@
 
 						Notes: 
 						# GK
+						- more semantic
+						
 
 					</textarea>
 				</section>
@@ -282,8 +305,9 @@
 
 						Notes:
 						# GK
-						- How to create components
-						- How to use components
+						- How components are created 
+						- How components are used
+						- different methods depend on maturity
 					</textarea>
 				</section>
 
