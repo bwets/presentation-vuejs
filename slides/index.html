@@ -400,7 +400,7 @@
 						
 						Notes: 
 						# GK
-						- samples\Sample3-Notes\Final\Client\App\Pages\Edit.vue
+						- CODE samples\Notes\Client\App\Pages\Edit.vue
 						- Decorators: Component, Prop, Watch, Emit
 							- Can be used in JS
 						- Async /await
@@ -413,6 +413,11 @@
 					<h1>Vue Syntax</h1>
 					<aside class="notes">
 						<h1>GK</h1>
+						<ul>
+							<li>templates use specific syntax to be combined with html</li>
+							<li>most similar to angular</li>
+							
+						</ul>
 					</aside>
 				</section>
 
@@ -585,6 +590,7 @@
 					```
 					Notes: 
 					# GK
+					- vs 2017 struggles to format sass in style tag
 					</textarea>
 				</section>
 
@@ -599,8 +605,8 @@
 					
 					Notes: 
 					# GK
-					- samples\Mixins\extend.vue
-					- samples\Mixins\mixins.vue
+					- CODE samples\Mixins\extend.vue
+					- CODE samples\Mixins\mixins.vue
 							
 					</textarea>
 				</section>
@@ -759,9 +765,11 @@
 					
 					* Vue integrated in .net core project
 						- served by kestrel as static files
+					
 					Notes:
 					# GK
-					samples\Notes\tree.txt
+					- CODE samples\Notes\tree.txt
+
 					</textarea>
 				</section>
 
@@ -948,16 +956,34 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					## Other libraries
+					## Axios
 
-					* axios for HTTP calls
-					* vuelidate for input validation
+					``` typescript
+					import axios from "axios";
+					import { Note } from "~/Domains/Notes";
+					
+					export class NotesService {
+						baseUrl: string = "/api/notes/";
+					
+						async get(id: string): Promise<Note> {
+							const response = await axios.get(this.baseUrl + id);
+							return response.data;
+						}
+					
+						async save(item: Note): Promise<Note> {
+							const response = await axios.post(this.baseUrl, item);
+							return response.data;
+						}
+					}
+					```
 					
 					Notes:
 					# GK
-					TODO
+					- Vue used to bundle an http client
+					- now recommands to use axios
 					</textarea>
 				</section>
+
 			</section>
 
 			<section>
@@ -1043,9 +1069,16 @@
 					<textarea data-template>
 					## Webpack
 
+					- Vue loader for transpiling
+					- As standalone project, use vue cli to hide the complexity
+					- Map ~ as the Client root
+					- Use Babel for transpiling
+					- Prepare a separate DEV and PROD config
 					Notes:
 					# GK
-					TODO
+					- DEV vs PROD: minifing 
+					- DEV uses Watch
+					- In large apps, chunks help build time and download time //
 					</textarea>
 				</section>
 
@@ -1058,7 +1091,7 @@
 						- Vetur
 					* Chrome
 						- Vue.js devtools
-						- ![logo](https://lh3.googleusercontent.com/5snyNEPO0lAnf0RMvDYQwhHNeX0wGbS2ZtI0p7o85bEcg6V9tQQnvD7JtpluQvVn3BflDNMWrA=w640-h400-e365)
+					![logo](https://lh3.googleusercontent.com/5snyNEPO0lAnf0RMvDYQwhHNeX0wGbS2ZtI0p7o85bEcg6V9tQQnvD7JtpluQvVn3BflDNMWrA=w640-h400-e365)
 					
 					Notes:
 					# GK
@@ -1070,9 +1103,10 @@
 			<section>
 				<section data-markdown>
 					<textarea data-template>
-					# Comparaison
-					- with Angular
-					- with React
+					# Comparison
+					
+					![comparison](assets/comparison.png)
+					
 
 					Notes:
 					# GK
@@ -1117,10 +1151,12 @@
 					# Resources
 
 					https://github.com/vuejs/awesome-vue
+					https://github.com/Microsoft/TypeScript-Vue-Starter
+					
+					https://www.youtube.com/watch?v=SWZ_4YBFBhs
 					
 					Notes:
 					# GK
-					TODO
 					</textarea>
 				</section>
 			</section>
@@ -1128,11 +1164,8 @@
 			<section>
 				<section data-markdown>
 					<textarea data-template>
-					# Conclusion
-					Notes:
-					# GK
-					TODO
-					</textarea>
+					# Questions
+\					</textarea>
 				</section>
 			</section>
 		</div>
