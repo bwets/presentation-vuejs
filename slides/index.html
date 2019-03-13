@@ -753,6 +753,11 @@
 
 						Notes:
 						# LC	
+
+						- add reference to vue
+						- instanciate new Vue object
+						- specify the 'el' property with a selector
+
 					</textarea>
 				</section>
 
@@ -825,16 +830,17 @@
 				<section data-markdown>
 					<textarea data-template>
 					## Vuex
-
-					State management pattern 
-
-					Centralized store for all the components
+					- State management pattern 
+					- Centralized store for all the components
 					
 					Notes:
 					# LC
-					Vuex is a state management pattern. 
+					Vuex is a state management pattern :
+					- state : source of truth that drives our app
+					- view : declarative mapping of the state
+					- actions : the possible ways the state could change in reaction to user inputs
 			
-					It serves as a centralized store for all the components in an application. 
+					It serves as a centralized store for all the components in an application
 
 					</textarea>
 				</section>
@@ -842,11 +848,9 @@
 				<section data-markdown>
 					<textarea data-template>
 					### Vuex State
-					Vuex uses a single state tree
-					
-					This single object contains all your application level state
-					
-					Serves as the "single source of truth".
+					- Vuex uses a single state tree
+					- This single object contains all your application level state
+					- Serves as the "single source of truth"
 					
 					```js
 					const store = new Vuex.Store({
@@ -866,8 +870,7 @@
 				<section data-markdown>
 					<textarea data-template>
 					### Vuex Mutations
-					The only way to actually change state
-					
+					- The only way to actually change state
 				
 					``` js 
 					const store = new Vuex.Store({
@@ -885,7 +888,7 @@
 					
 					Notes:
 					# LC
-					The only way to actually change state in a Vuex store is by committing a mutation.
+					The only way to actually change state in a Vuex store is by committing a mutation
 									
 					</textarea>
 				</section>
@@ -1001,7 +1004,7 @@
 					## Vue CLI
 
 					### Getting Started
-					Installation:
+					- Installation:
 					
 					```
 					npm install -g @vue/cli
@@ -1011,39 +1014,22 @@
 					yarn global add @vue/cli
 					```
 					
-					Create a project:
+					- Create a project:
 					```
 					vue create my-project
 					```
 					
-					Start server
+					- Start server
 					```
 					vue serve
 					``` 
 
 					Notes:
 					# LC
-					
-					</textarea>
-				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-					### vue init
-					Legacy template
-					```
-					vue init webpack my-project
-					```
-
-					- **simple** : The simplest possible Vue setup in a single HTML file
-					- **webpack** : A full-featured Webpack + vue-loader setup with hot reload, linting, testing & css extraction
-					- **webpack-simple** : A simple Webpack + vue-loader setup for quick prototyping
-					- **browserify** : A full-featured Browserify + vueify setup with hot-reload, linting & unit testing
-					- **browserify-simple** : A simple Browserify + vueify setup for quick prototyping
-					- **pwa** : PWA template for vue-cli based on the webpack template
-				
-					Notes:
-					# LC
+					- vue init webpack my-project
+					- to create quickly a new project
+					- can create own ones
 					
 					</textarea>
 				</section>
@@ -1063,7 +1049,6 @@
 							
 					</textarea>
 				</section>
-
 				
 				<section data-markdown>
 					<textarea data-template>
