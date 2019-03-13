@@ -380,12 +380,15 @@
 						```
 						Notes:
 						# LC
-						Own vue file
-
-						Export a structure
-						 - Components
-						 - Lifecycle methods
-						 - Methods
+						Exportation of a structure defining the component :
+						- Data
+						- Computed properties
+						- Methods
+						- Lifecycle methods
+						- Properties
+						- Components
+						
+						Place in own vue file
 
 					</textarea>
 				</section>
@@ -774,10 +777,10 @@
 
 						Notes:
 						# LC	
-
 						- add reference to vue
 						- instanciate new Vue object
-						- specify the 'el' property with a selector
+						- specify with a selector the element on whitch it is binded
+						- the element linked become the root of vue app
 
 						DEMO
 
@@ -858,12 +861,8 @@
 					
 					Notes:
 					# LC
-					Vuex is a state management pattern :
-					- state
-					- mutations
-					- actions
-			
-					It serves as a centralized store for all the components in an application
+					- Official implementation to manage the state of properties
+					- It serves as a centralized store for all the components in an application
 
 					</textarea>
 				</section>
@@ -872,7 +871,7 @@
 					<textarea data-template>
 					### Vuex State
 					- Vuex uses a single state tree
-					- This single object contains all your application level state
+					- This single object contains all your application state
 					- Serves as the "single source of truth"
 					
 					```js
@@ -922,7 +921,7 @@
 					### Vuex Actions
 					Similar to mutations, but:
 					- Instead of mutating the state, actions commit mutations.
-					- Actions can contain arbitrary asynchronous operations.
+					- Actions can contain asynchronous operations.
 					
 					
 					``` js
@@ -941,7 +940,7 @@
 					# LC
 					Actions are similar to mutations, the differences being that:
 					- Instead of mutating the state, actions commit mutations.
-					- Actions can contain arbitrary asynchronous operations.
+					- They can contain asynchronous operations.
 
 					</textarea>
 				</section>
@@ -1049,9 +1048,10 @@
 
 					Notes:
 					# LC
+					- must be install globally
+					- usefull to create quickly a new project
 
 					- vue init webpack my-project
-					- to create quickly a new project
 					- can create own ones
 					
 					</textarea>
