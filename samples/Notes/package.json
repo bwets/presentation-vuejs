@@ -5,7 +5,7 @@
 	"typings": "dist/index",
 	"dependencies": {
 		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
-		"@fortawesome/fontawesome-pro": "5.7.2",
+		"@fortawesome/fontawesome-free": "5.7.2",
 		"@fortawesome/fontawesome-svg-core": "^1.2.12",
 		"@fortawesome/free-brands-svg-icons": "^5.7.2",
 		"@fortawesome/free-regular-svg-icons": "^5.6.3",
@@ -74,7 +74,7 @@
 		"vue-template-compiler": "^2.5.21",
 		"webpack": "4.28.2",
 		"webpack-clean-obsolete-chunks": "^0.4.0",
-		"webpack-cli": "^3.1.2",
+		"webpack-cli": "^3.2.3",
 		"webpack-dashboard": "^2.0.0"
 	}
 }
