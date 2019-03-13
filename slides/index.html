@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 
 <head>
@@ -380,6 +380,9 @@
 						```
 						Notes:
 						# LC
+						Own vue file
+
+						Export a structure
 						 - Components
 						 - Lifecycle methods
 						 - Methods
@@ -512,8 +515,22 @@
 						#### Event Handling
 						v-on or @
 						``` html
-						<note-view :note="n" v-on:remove="remove" @edit="edit" @share="share" />
+						<template>
+							<note-view :note="n" v-on:remove="remove" @edit="edit" />
+						</template>
+						
+						<script>
+							export default {
+								remove() {
+									alert('remove');
+								},
+								edit() {
+									alert('edit');
+								}
+							}
+						</script>
 						```
+
 						Notes:
 						# LC
 					</textarea>
@@ -762,6 +779,8 @@
 						- instanciate new Vue object
 						- specify the 'el' property with a selector
 
+						DEMO
+
 					</textarea>
 				</section>
 
@@ -840,9 +859,9 @@
 					Notes:
 					# LC
 					Vuex is a state management pattern :
-					- state : source of truth that drives our app
-					- view : declarative mapping of the state
-					- actions : the possible ways the state could change in reaction to user inputs
+					- state
+					- mutations
+					- actions
 			
 					It serves as a centralized store for all the components in an application
 
@@ -1050,6 +1069,8 @@
 					
 					Notes:
 					# LC
+
+                    DEMO
 							
 					</textarea>
 				</section>
