@@ -337,6 +337,8 @@
 						The first one is directly in your HTML page by adding a attribute on the component.  
 						Vue will use the inner content as a template.  
 						Permtits to integrate Vue very quickly
+						- CODE samples\TemplateInline\index.html
+						- CODE samples\TemplateInline\result.html
 					</textarea>
 				</section>
 
@@ -651,13 +653,8 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					## Enable the router
-					- Import it in the app
-					``` json
-					import VueRouter from 'vue-router'
-					Vue.use(VueRouter)
-					```
-					- In the template
+					## In the template
+					- Enable the router
 					``` json
 					<nav>
 						<router-link to="/">Home</router-link>
@@ -669,14 +666,15 @@
 
 					Notes:
 					# DC  
-					router-link to define the URLs  
-					router-view is the component is where the Vue Router will put the content that matches the current URL.  
+					router-link to define the URLs, link with click interception by browser, no refresh  
+					router-view rendered content  
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-					## Define the routes
+					## In the the JS
+					- Define the routes
 					``` json
 					const router = new VueRouter({
 						routes: [
@@ -686,37 +684,18 @@
 						]
 					})
 					```
-					- Routes can be named
+					- Navigate to a URL
 					``` json
-					{ name: 'contact', path: '/contact', component: Contact }
+					this.$router.push({ path: '/contact' })
 					```
 					
 					Notes:		
-					# DC  
+					# DC  					
 					Pass the routes to the initialization of the router object  
+					navigate to a URL  
 						
 					</textarea>
 				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					## Implementation 
-					- Router needs to be passed to the Vue root instance
-					``` json
-					new Vue({
-						router
-					}).$mount('#app')
-					```
-					- Navigate to a route
-					``` json
-					this.$router.push({ path: 'contact' })
-					```
-					Notes:
-					# DC
-						
-					</textarea>
-				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
@@ -817,12 +796,14 @@
 					
 					Notes:
 					# DC
+					free and open source
+					Bootstrap + Vue, Quasar, Element UI
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-					# Vuetify Example 
+					### Vuetify Example 
 					``` json
 					<v-app>
 						<v-tooltip bottom>
@@ -837,6 +818,23 @@
 						></v-select>
 					</v-app>
 					```
+					
+					Notes:
+					# DC
+					</textarea>
+				</section>
+				
+				<section data-markdown>
+					<textarea data-template>
+					### Vuetify Example 	
+					  
+					![vue UI](assets/text-field.png)  
+					  
+					  
+					![vue UI](assets/buttons.png)  
+					  
+					  
+					![vue UI](assets/pagination.png)
 					
 					Notes:
 					# DC
@@ -1118,7 +1116,7 @@
 					<textarea data-template>
 					# With Angular 
 					- Typescript/Javascript
-					- Vue is easier to learn
+					- Framework/Library
 					- WebApp vs SPA
 					
 					Notes:
@@ -1132,15 +1130,15 @@
 				<section data-markdown>
 					<textarea data-template>
 					# With React 
-					- Javascript, Virtual DOM and SPA
-					- Vue is easier to learn
+					- Javascript Librairies
+					- Virtual DOM and SPA
 					- Templates vs JSX
 					
 					Notes:
 					# DC  
 					Both are Library, written js, use VDOM  
 					Separations of concerns vs everything is javascript  
-												
+					Can do JSX in Vue aswell  							
 					</textarea>
 				</section>
 		
